@@ -9,12 +9,12 @@ default: &default
 
 development:
   <<: *default
-  database: notescabinetapp_dev
+  database: filecabinetapp_dev
   
 test:
   <<: *default
-  database: notescabinetapp_test
+  database: filecabinetapp_test
 
 production:
   <<: *default
-  database: notescabinetapp_prod
+  database: filecabinetapp_prod
