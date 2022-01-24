@@ -1,0 +1,26 @@
+<style>
+.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;  
+}
+</style>
+
+<%= simple_form_for @doc do |f| %>
+    <% f.input :title %>
+    <% f.input :content %>
+    <%= f.button :submit %>
+
+
+<form>
+    <div class="form-group col-sm-5 my-1 center">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="document-title"  name="doc[title]">
+
+        <label for="content">Content</label>
+        <textarea class="form-control" id="content-textarea" rows="3"  name="doc[content]"></textarea>
+    </div>
+</form>
+
+<% end %>

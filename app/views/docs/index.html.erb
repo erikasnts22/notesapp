@@ -1,0 +1,20 @@
+<center>
+<% @docs.each do |doc| %>
+<br/>
+<div class="w-50">
+  <div class="col">
+    <div class="card text-center">
+      <div class="card-header">
+        <h3><%= link_to doc.title, doc %></h3>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><%= truncate(doc.content, length:100) %></p>
+      </div>
+      <div class="card-footer text-muted">
+        <%= time_ago_in_words(doc.created_at) %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</center>

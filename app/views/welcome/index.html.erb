@@ -1,0 +1,40 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.bg {
+  /* The image used */
+    background-image: url("<%= asset_path "welcome_background.png" %>");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1.text-center {
+  color: black;
+  padding-top: 150px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="bg">
+    <center>
+        <h1 class="text-center">What's important?</h1>
+        <p> Beyond words, the notebook is here.</p>
+        <br/>
+        <%= link_to "Post-it!", new_user_registration_path, :class => "btn btn-lg btn-success" %>
+    </center>  
+</div>
+
+</body>
+

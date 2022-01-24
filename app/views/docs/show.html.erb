@@ -1,0 +1,30 @@
+<head>
+	<style>
+		p {  
+		padding-top: 50px;
+		}
+
+		h1.text-center {
+		color: green;
+		padding-top: 50px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<h1 class="text-center"><%= @doc.title %></h1>
+		<p class="text-justify"><%= @doc.content %></p>
+	</div>
+
+	<hr class="my-4">
+
+	<div class="col-md-12 text-center">
+		<%= link_to "All Notes", docs_path, :class => "btn btn-sm btn-outline-dark m-1" %>
+		<%= link_to "Update", edit_doc_path(@doc), :class => "btn btn-sm btn-outline-dark m-1" %>
+		<%= link_to 'Trash It!', docs_delete_path, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-sm btn-outline-danger" %>
+	</div>
+
+</body>
+
